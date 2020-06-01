@@ -62,7 +62,8 @@ namespace LibraryApiIntegrationTests
 
                     try
                     {
-
+                        DataUtils.ReInitializeDb(db);
+                        
                     }
                     catch (Exception ex)
                     {
