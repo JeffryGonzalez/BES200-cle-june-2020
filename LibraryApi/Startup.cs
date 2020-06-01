@@ -35,7 +35,7 @@ namespace LibraryApi
                     options.JsonSerializerOptions.IgnoreNullValues = true;
                 });
 
-            services.AddTransient<ISystemTime, SystemTime>();
+            services.AddTransient<ISystemTime, SystemTime>(); // Create a new instance of this for each needed injection
 
             services.AddDbContext<LibraryDataContext>(options =>
 
