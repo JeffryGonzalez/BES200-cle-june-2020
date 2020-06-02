@@ -26,6 +26,7 @@ namespace LibraryApiIntegrationTests.Books
         {
             var response = await Client.GetAsync("/books");
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            
         }
 
         // Is it returning Json?
