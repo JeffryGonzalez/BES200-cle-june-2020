@@ -17,6 +17,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using AutoMapper;
 using LibraryApi.Profiles;
+using System.Text.Json.Serialization;
 
 namespace LibraryApi
 {
@@ -36,6 +37,7 @@ namespace LibraryApi
                 .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.IgnoreNullValues = true;
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                 });
 
             services.AddTransient<ISystemTime, SystemTime>(); // Create a new instance of this for each needed injection

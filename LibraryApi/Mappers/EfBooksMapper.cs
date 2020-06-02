@@ -38,7 +38,8 @@ namespace LibraryApi.Mappers
         {
             var books = Context.Books
                .Where(b => b.InStock)
-               .ProjectTo<GetBooksResponseItem>(Config);
+               .ProjectTo<GetBooksResponseItem>(Config)
+               .AsNoTracking(); // On read-only things, ALWAYS do this.
 
 
             if (genre != null)
