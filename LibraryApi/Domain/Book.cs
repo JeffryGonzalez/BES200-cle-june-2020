@@ -13,5 +13,7 @@ namespace LibraryApi.Domain
         public string Genre { get; set; }
         public int NumberOfPages { get; set; }
         public bool InStock { get; set; }
+
+        public string Review { get; set; }
     }
 }

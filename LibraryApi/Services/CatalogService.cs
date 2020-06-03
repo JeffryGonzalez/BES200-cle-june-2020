@@ -19,9 +19,9 @@ namespace LibraryApi.Services
 
         public async Task<CatalogModel> GetCatalogAsync()
         {
-            var catalog = await Cache.GetAsync("catalog");
+            var catalog = await Cache.GetAsync("catalog"); // ask the cache
             string newCatalog = null;
-            if (catalog == null) // wasn't found in cache
+            if (catalog == null) // wasn't found in cache 
             {
                 newCatalog = $"This catalog was created at {DateTime.Now.ToLongTimeString()}";
                 var encodedCatalog = Encoding.UTF8.GetBytes(newCatalog);
