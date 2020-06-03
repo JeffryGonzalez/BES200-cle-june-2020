@@ -16,16 +16,23 @@ namespace LibraryApi
         {
             using(var scope = webHost.Services.CreateScope())
             {
+                T db = null;
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var db = services.GetRequiredService<T>();
+                     db = services.GetRequiredService<T>();
                  
                     db.Database.Migrate();
                 } catch (Exception ex)
                 {
                     var logger = services.GetRequiredService<ILogger<Program>>();
-                   
+
+                    logger.LogWarning("Fixin' to try it again");
+
+                    Thread.Sleep(8000);
+                    logger.LogWarning("try'd it again again");
+                    
+                    db.Database.Migrate(); 
                     logger.LogError(ex, "An error occurred trying to migrate the database");
                 }
             }
