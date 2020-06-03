@@ -14,6 +14,7 @@ namespace LibraryApi
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Hello, World");
             CreateHostBuilder(args).Build().MigrateDatabase<LibraryDataContext>().Run();
         }
 
