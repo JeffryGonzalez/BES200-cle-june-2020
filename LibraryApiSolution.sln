@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryApi", "LibraryApi\Li
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryApiIntegrationTests", "LibraryApiIntegrationTests\LibraryApiIntegrationTests.csproj", "{37D15355-AF3F-4098-B3FB-960826F80633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeClient", "TimeClient\TimeClient.csproj", "{6CAD0233-F9BE-4297-B1EC-5F3E790AEB46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeClient", "TimeClient\TimeClient.csproj", "{6CAD0233-F9BE-4297-B1EC-5F3E790AEB46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqUtils", "bes200-rabbitmqutils\RabbitMqUtils.csproj", "{01AB1479-7B8C-4F3A-B275-7AAFB6DB307E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{6CAD0233-F9BE-4297-B1EC-5F3E790AEB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CAD0233-F9BE-4297-B1EC-5F3E790AEB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CAD0233-F9BE-4297-B1EC-5F3E790AEB46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01AB1479-7B8C-4F3A-B275-7AAFB6DB307E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AB1479-7B8C-4F3A-B275-7AAFB6DB307E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AB1479-7B8C-4F3A-B275-7AAFB6DB307E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AB1479-7B8C-4F3A-B275-7AAFB6DB307E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
